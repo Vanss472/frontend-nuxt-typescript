@@ -1,25 +1,10 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">frontend-nuxt-typescript</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div>
+    <div class="container">
+      <div class="content">
+        <Logo />
+        <Hero />
+        <Menu />
       </div>
     </div>
   </div>
@@ -33,9 +18,20 @@ export default Vue.extend({})
 
 <style>
 .container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://picsum.photos/1920/900?grayscale&random=1');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
