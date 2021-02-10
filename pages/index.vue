@@ -4,7 +4,7 @@
       <div class="content">
         <Logo />
         <Hero />
-        <Menu />
+        <Menu :toggle-btn-one="toggleBtnOne" :toggle-btn-two="toggleBtnTwo" />
       </div>
     </div>
   </div>
@@ -12,8 +12,29 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import Menu from '~/components/Menu.vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  components: {
+    Menu,
+  },
+  data() {
+    return {
+      showBtnOne: false,
+      showBtnTwo: false,
+    }
+  },
+  methods: {
+    toggleBtnOne() {
+      console.log('clicked 1')
+      this.showBtnOne = !this.showBtnOne
+    },
+    toggleBtnTwo() {
+      console.log('clicked 2')
+      this.showBtnTwo = !this.showBtnTwo
+    },
+  },
+})
 </script>
 
 <style>

@@ -2,11 +2,33 @@
   <div class="menu">
     <p class="menu-title">Aye wench jolly boat lass</p>
     <div class="menu-group-buttons">
-      <button type="button">Wench Letter of Marque</button>
-      <button type="button">Barbary Coast provost</button>
+      <button type="button" @click="toggleBtnOne">
+        Wench Letter of Marque
+      </button>
+      <button type="button" @click="toggleBtnTwo">Barbary Coast provost</button>
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import Vue, { PropOptions } from 'vue'
+
+export default Vue.extend({
+  name: 'Menu',
+  props: {
+    toggleBtnOne: {
+      type: Function,
+      required: true,
+      default: () => false,
+    },
+    toggleBtnTwo: {
+      type: Function,
+      required: true,
+      default: () => false,
+    },
+  },
+})
+</script>
 
 <style scoped>
 .menu {
