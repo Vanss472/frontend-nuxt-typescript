@@ -56,6 +56,7 @@ export default Vue.extend({
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: linear-gradient(180deg, #3b0cdc, transparent);
 }
 
 .title {
