@@ -2,6 +2,20 @@
   <div>
     <div class="container">
       <div class="content">
+        <PopUp
+          v-if="showBtnOne"
+          title="Deadlights jack lad"
+          sub-title="callywag dance the hempen jig carouser"
+          iframe-src="https://player.vimeo.com/video/310438775?title=0&amp;portrait=0&amp;byline=0&amp;autoplay=1"
+          :close-popup="closePopup"
+        />
+        <PopUp
+          v-if="showBtnTwo"
+          title="Deadlights jack lad 2"
+          sub-title="spyglass sheet transom heave to"
+          iframe-src="https://player.vimeo.com/video/216445847?title=0&portrait=0&byline=0&autoplay=1"
+          :close-popup="closePopup"
+        />
         <Logo />
         <Hero />
         <Menu :toggle-btn-one="toggleBtnOne" :toggle-btn-two="toggleBtnTwo" />
@@ -33,6 +47,15 @@ export default Vue.extend({
       console.log('clicked 2')
       this.showBtnTwo = !this.showBtnTwo
     },
+    closePopup() {
+      if (this.showBtnOne) {
+        this.showBtnOne = !this.showBtnOne
+      }
+
+      if (this.showBtnTwo) {
+        this.showBtnTwo = !this.showBtnTwo
+      }
+    },
   },
 })
 </script>
@@ -56,7 +79,7 @@ export default Vue.extend({
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(180deg, #3b0cdc, transparent);
+  background: linear-gradient(180deg, #dc780c, transparent);
 }
 
 .title {
