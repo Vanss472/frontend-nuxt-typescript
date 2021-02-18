@@ -34,7 +34,7 @@ export default Vue.extend({
 .menu {
   padding-right: 1.25rem;
   padding-left: 1.25rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 .menu-title {
   text-transform: uppercase;
@@ -46,7 +46,7 @@ export default Vue.extend({
 .menu-group-buttons {
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
+  margin-top: 0.625rem;
 }
 .menu-group-buttons button {
   border: 1px solid white;
@@ -70,7 +70,7 @@ export default Vue.extend({
   background-color: white;
 }
 .menu-group-buttons button:not(:first-child) {
-  margin-top: 2rem;
+  margin-top: 0.625rem;
 }
 @media only screen and (min-width: 768px) {
   .menu {

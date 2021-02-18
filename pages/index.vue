@@ -40,11 +40,9 @@ export default Vue.extend({
   },
   methods: {
     toggleBtnOne() {
-      console.log('clicked 1')
       this.showBtnOne = !this.showBtnOne
     },
     toggleBtnTwo() {
-      console.log('clicked 2')
       this.showBtnTwo = !this.showBtnTwo
     },
     closePopup() {
@@ -61,6 +59,17 @@ export default Vue.extend({
 </script>
 
 <style>
+button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  appearance: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .container {
   position: relative;
   width: 100%;
